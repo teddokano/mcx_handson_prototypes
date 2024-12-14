@@ -13,11 +13,5 @@ int main( void )
 {
 	printf( "Hello, world!\r\n" );
 
-	led	= true;
-
-	while ( true )
-	{
-		led	= !led;
-		wait( 0.5 );
-	}
+	//	This code will be wrtten later
 }
