@@ -66,7 +66,7 @@ main-build: 0_5_function.axf
 0_5_function.axf: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU C++ Linker'
-	arm-none-eabi-c++ -nostdlib -L"/Users/tedd/dev/mcuxpresso/handson_prototypes/_r01lib_frdm_mcxn236/Debug" -Xlinker -Map="0_5_function.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T 0_5_function_Release.ld -o "0_5_function.axf" $(OBJS) $(USER_OBJS) $(LIBS) -l_r01lib_frdm_mcxn236
+	arm-none-eabi-c++ -nostdlib -L"/Users/tedd/dev/mcuxpresso/mcx_handson_prototypes/_r01lib_frdm_mcxn236/Release" -Xlinker -Map="0_5_function.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T 0_5_function_Release.ld -o "0_5_function.axf" $(OBJS) $(USER_OBJS) $(LIBS) -l_r01lib_frdm_mcxn236
 	@echo 'Finished building target: $@'
 	@echo ' '
 
