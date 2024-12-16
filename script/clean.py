@@ -62,6 +62,7 @@ for target in doxy_path:
 
 for target in prjs_path:
 	print( "####### cleaning: " + target )			
+	subprocess.run( "rm " + target + "/.gitignore", shell = True )	# Delete ".gitignore" file added by IDE
 
 	for cnfg in build_configs:
 		try:
