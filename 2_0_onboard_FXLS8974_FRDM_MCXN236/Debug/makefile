@@ -49,7 +49,7 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := 2_0_onboard_FXLS8974_FRDM_MCXN236_FRDM_MCXN236
+BUILD_ARTIFACT_NAME := 2_0_onboard_FXLS8974_FRDM_MCXN236
 BUILD_ARTIFACT_EXTENSION := axf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
@@ -61,24 +61,24 @@ all:
 	+@$(MAKE) --no-print-directory main-build && $(MAKE) --no-print-directory post-build
 
 # Main-build Target
-main-build: 2_0_onboard_FXLS8974_FRDM_MCXN236_FRDM_MCXN236.axf
+main-build: 2_0_onboard_FXLS8974_FRDM_MCXN236.axf
 
 # Tool invocations
-2_0_onboard_FXLS8974_FRDM_MCXN236_FRDM_MCXN236.axf: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+2_0_onboard_FXLS8974_FRDM_MCXN236.axf: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU C++ Linker'
-	arm-none-eabi-c++ -nostdlib -L"/Users/tedd/dev/mcuxpresso/mcx_handson_prototypes/_r01lib_frdm_mcxn236/Debug" -Xlinker -Map="2_0_onboard_FXLS8974_FRDM_MCXN236_FRDM_MCXN236.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T 2_0_onboard_FXLS8974_FRDM_MCXN236_FRDM_MCXN236_Debug.ld -u _printf_float -u _scanf_float -o "2_0_onboard_FXLS8974_FRDM_MCXN236_FRDM_MCXN236.axf" $(OBJS) $(USER_OBJS) $(LIBS) -l_r01lib_frdm_mcxn236
+	arm-none-eabi-c++ -nostdlib -L"/Users/tedd/dev/mcuxpresso/mcx_handson_prototypes/_r01lib_frdm_mcxn236/Debug" -Xlinker -Map="2_0_onboard_FXLS8974_FRDM_MCXN236.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T 2_0_onboard_FXLS8974_FRDM_MCXN236_Debug.ld -u _printf_float -u _scanf_float -o "2_0_onboard_FXLS8974_FRDM_MCXN236.axf" $(OBJS) $(USER_OBJS) $(LIBS) -l_r01lib_frdm_mcxn236
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) 2_0_onboard_FXLS8974_FRDM_MCXN236_FRDM_MCXN236.axf
+	-$(RM) 2_0_onboard_FXLS8974_FRDM_MCXN236.axf
 	-@echo ' '
 
 post-build:
 	-@echo 'Performing post-build steps'
-	-arm-none-eabi-size "2_0_onboard_FXLS8974_FRDM_MCXN236_FRDM_MCXN236.axf"; # arm-none-eabi-objcopy -v -O binary "2_0_onboard_FXLS8974_FRDM_MCXN236_FRDM_MCXN236.axf" "2_0_onboard_FXLS8974_FRDM_MCXN236_FRDM_MCXN236.bin" ; # checksum -p MCXN236 -d "2_0_onboard_FXLS8974_FRDM_MCXN236_FRDM_MCXN236.bin";
+	-arm-none-eabi-size "2_0_onboard_FXLS8974_FRDM_MCXN236.axf"; # arm-none-eabi-objcopy -v -O binary "2_0_onboard_FXLS8974_FRDM_MCXN236.axf" "2_0_onboard_FXLS8974_FRDM_MCXN236.bin" ; # checksum -p MCXN236 -d "2_0_onboard_FXLS8974_FRDM_MCXN236.bin";
 	-@echo ' '
 
 .PHONY: all clean dependents main-build post-build
