@@ -62,7 +62,6 @@ for target in doxy_path:
 
 for target in prjs_path:
 	print( "####### cleaning: " + target )			
-	subprocess.run( "rm " + target + "/.gitignore", shell = True )	# Delete ".gitignore" file added by IDE
 
 	for cnfg in build_configs:
 		try:
@@ -92,6 +91,12 @@ for target in prjs_path:
 				subprocess.run( "rm -rf " + cnfg + "/", shell = True )
 					
 		subprocess.run( "rm *.launch *.mex", shell = True )
+
+for target in prjs_path:
+	print( "rm -rf " + target + "/.gitignore" )			
+	subprocess.run( "rm -rf " + target + "/.gitignore", shell = True )	# Delete ".gitignore" file added by IDE
+
+
 
 print( "" )
 print( "======= process completed for .. =======" )
