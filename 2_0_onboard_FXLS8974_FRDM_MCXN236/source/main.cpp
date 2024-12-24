@@ -11,8 +11,6 @@
 I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL
 FXLS89xx	sensor( i2c );
 
-float		x, y, z;
-
 int main( void )
 {
 	printf( "***** Hello, FXLS89xx! *****\r\n" );
