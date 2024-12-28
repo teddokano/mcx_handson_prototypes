@@ -7,6 +7,10 @@
 #include	"r01lib.h"
 #include	"led/PCA9955B.h"
 #include	<math.h>
+#include	<fstream>
+
+using namespace	std;
+
 
 I2C			i2c( A4, A5 );	//	SDA, SCL
 PCA9955B	drv( i2c );
@@ -15,21 +19,16 @@ PCA9955B	drv( i2c );
 
 int main( void )
 {
-	printf( "***** Hello, PCA9955B! *****\r\n" );
-	printf( "pi     = %f\r\n", M_PI   );
-	printf( "PERIOD = %d\r\n", PERIOD );
+	cout << "***** Hello, PCA9955B! *****" << endl;
+	cout << "pi     = " << M_PI << endl;
+	cout << "PERIOD = " << PERIOD << endl;
 
 	drv.begin( 1.0, PCA9955B::ARDUINO_SHIELD );
 
 	float	a, b, c;
 
-	FILE	*fp;
-	if ( NULL == (fp	= fopen( "test.csv", "w" )) )
-	{
-		printf( "file open error\r\n" );
-		return 0;
-	}
-
+	ofstream ofs( "test.csv" );
+	
 	while ( true )
 	{
 		for ( int i = 0; i < PERIOD; i++ )
@@ -38,7 +37,7 @@ int main( void )
 			b	= sin( a );
 			c	= 0.5 + 0.5 * b;
 
-			fprintf( fp, "%i, %f, %f, %f\r\n", i, a, b, c );
+			ofs << i << ", " << a << ", " << b << ", " << c << endl;
 
 			drv.pwm( 0, c );
 			wait( 0.01 );

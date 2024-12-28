@@ -6,6 +6,8 @@
 
 #include	"r01lib.h"
 
+using namespace	std;
+
 class	Blink : public DigitalOut
 {
 public:
@@ -41,7 +43,7 @@ Blink	b( BLUE,  3 );
 
 int main( void )
 {
-	printf( "Hello, Blink class!\r\n" );
+	cout << "Hello, Blink class!" << endl;
 
 	while ( true )
 	{

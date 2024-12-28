@@ -8,13 +8,15 @@
 #include	"accelerometer/FXLS89xx_Arduino.h"
 #include	<math.h>
 
+using namespace	std;
+
 I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL
 FXLS89xx	sensor( i2c );
 
 int main( void )
 {
-	printf( "***** Hello, FXLS89xx! *****\r\n" );
-	printf( "Shows direction of tilt\r\n" );
+	cout << "***** Hello, FXLS89xx! *****" << endl;
+	cout << "Shows direction of tilt" << endl;
 	i2c.scan();
 
 	sensor.init();
@@ -30,10 +32,10 @@ int main( void )
 	while ( true )
 	{
 		sensor.read_XYZ( sensor_data );
-
 		theta	= atan2( sensor_data[ 0 ], sensor_data[ 1 ] );
-
-		printf( "%f\r\n", theta / M_PI * 180.0 );
+		
+		cout << theta / M_PI * 180.0 << endl;
+		
 		wait( 0.2 );
 	}
 }

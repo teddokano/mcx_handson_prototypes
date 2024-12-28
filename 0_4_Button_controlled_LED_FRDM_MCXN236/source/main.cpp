@@ -6,6 +6,8 @@
 
 #include	"r01lib.h"
 
+using namespace	std;
+
 DigitalOut	r( RED   );
 DigitalOut	g( GREEN );
 DigitalOut	b( BLUE  );
@@ -14,26 +16,29 @@ DigitalIn	btn( SW3 );
 
 int main( void )
 {
-	printf( "Hello, world!\r\n" );
-	printf( "Press button to change color\r\n" );
+	cout << "Hello, world!" << endl;
+	cout << "Press button to change color" << endl;
 
 	int	count	= 0;
 
-	printf( "%d   ", count );
-	printf( "\033[31mred\033[39m\r\n" );
+	cout << count;
+	cout << "   \033[31mred\033[39m" << endl;
 
-	
+	r	= 0;
+	g	= 1;
+	b	= 1;
+
 	while ( true )
 	{
 		if ( btn == 0 )
 		{
 			count	= (count + 1) % 3;
-			
-			printf( "%d   ", count );
+
+			cout << count;
 
 			if ( count == 0 )
 			{
-				printf( "\033[31mred\033[39m\r\n" );
+				cout << "   \033[31mred\033[39m" << endl;
 
 				r	= 0;
 				g	= 1;
@@ -42,7 +47,7 @@ int main( void )
 
 			if ( count == 1 )
 			{
-				printf( "\033[32mgreen\033[39m\r\n" );
+				cout << "   \033[32mgreen\033[39m" << endl;
 
 				r	= 1;
 				g	= 0;
@@ -51,7 +56,7 @@ int main( void )
 
 			if ( count == 2 )
 			{
-				printf( "\033[34mblue\033[39m\r\n" );
+				cout << "   \033[34mblue\033[39m" << endl;
 
 				r	= 1;
 				g	= 1;
