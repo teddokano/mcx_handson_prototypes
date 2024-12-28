@@ -6,7 +6,7 @@
  * Generated linker script file for MCXN236
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v24.9 [Build 25] [2024-09-26] on 2024/12/25 3:35:21
+ * MCUXpresso IDE v24.9 [Build 25] [2024-09-26] on 2024/12/28 15:29:03
  */
 
 INCLUDE "2_1_onboard_FXLS8974_FRDM_MCXN236_Release_library.ld"

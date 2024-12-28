@@ -1,8 +1,7 @@
-/** test code for r01lib
- *
+/*
  *  @author Tedd OKANO
  *
- *  Released under the MIT license
+ *  Released under the MIT license License
  */
 
 #include	"r01lib.h"
@@ -23,7 +22,6 @@ int main( void )
 	drv.begin( 1.0, PCA9955B::ARDUINO_SHIELD );
 
 	float	a, b, c;
-
 
 	FILE	*fp;
 	if ( NULL == (fp	= fopen( "test.csv", "w" )) )

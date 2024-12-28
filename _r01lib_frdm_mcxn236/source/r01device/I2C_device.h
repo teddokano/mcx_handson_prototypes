@@ -1,9 +1,5 @@
-/** I2C device abstracting class
- *
- *	This class provides common methods for all I2C devices
- *
- *  @class   I2C_device
- *  @author  Tedd OKANO
+/*
+ *  @author Tedd OKANO
  *
  *  Released under the MIT license License
  */
@@ -165,6 +161,13 @@ public:
 	void bit_op8(  uint8_t reg,  uint8_t mask,  uint8_t value );
 	void bit_op16( uint8_t reg, uint16_t mask, uint16_t value );
 
+	/** ping
+	 *		check device returns ACK
+	 *
+	 * @return true if ACKs
+	 */
+	bool ping( void );
+	
 	/** ping (class method)
 	 *
 	 * @param target address

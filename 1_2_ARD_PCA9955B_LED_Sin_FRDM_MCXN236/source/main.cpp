@@ -1,8 +1,7 @@
-/** test code for r01lib
- *
+/*
  *  @author Tedd OKANO
  *
- *  Released under the MIT license
+ *  Released under the MIT license License
  */
 
 #include	"r01lib.h"
