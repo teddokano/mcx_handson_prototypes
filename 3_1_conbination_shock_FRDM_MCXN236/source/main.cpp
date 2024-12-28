@@ -9,13 +9,15 @@
 #include	"accelerometer/FXLS89xx_Arduino.h"
 #include	<math.h>
 
+using namespace	std;
+
 //	Since the FRDM-MCXN236 I2C on A4/A5 and MB_SDA/MB_SCL are using same peripheral unit.
 //	However, the IO pins are assigned to different ones and those cannot be routed in parallel.
 //	So, when this demo is being tried, connect following pins
 //		1. PCA9955BTW-ARD J89 pin4 -- FRDM-MCXN236 J8 pin4
 //		2. PCA9955BTW-ARD J89 pin2 -- FRDM-MCXN236 J8 pin3
 
-I2C			i2c( A4, A5 );	//	SDA, SCL
+I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL
 PCA9955B	drv(    i2c );
 FXLS89xx	sensor( i2c );
 
@@ -23,8 +25,8 @@ float	abs_g( float *data );
 
 int main( void )
 {
-	printf( "***** Hello, PCA9955B and FXLS89xx! *****\r\n" );
-	printf( "Shows direction of tilt in color\r\n" );
+	cout << "***** Hello, PCA9955B and FXLS89xx! *****" << endl;
+	cout << "Shows direction of tilt in color" << endl;
 	i2c.scan();
 
 	drv.begin( 1.0, PCA9955B::ARDUINO_SHIELD );

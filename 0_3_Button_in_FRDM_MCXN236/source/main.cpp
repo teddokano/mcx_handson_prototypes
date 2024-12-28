@@ -6,12 +6,14 @@
 
 #include	"r01lib.h"
 
+using namespace	std;
+
 DigitalIn	btn( SW3 );
 
 int main( void )
 {
-	printf( "Hello, world!\r\n" );
-	printf( "Press button (SW3) to show the count\r\n" );
+	cout << "Hello, world!" << endl;
+	cout << "Press button (SW3) to show the count" << endl;
 
 	int	count	= 0;
 
@@ -21,7 +23,8 @@ int main( void )
 		{
 			++count;
 
-			printf( "%d\r\n", count );
+			cout << count << endl;
+
 			wait( 0.2 );
 		}
 	}

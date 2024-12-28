@@ -6,13 +6,15 @@
 
 #include	"r01lib.h"
 
+using namespace	std;
+
 DigitalOut	r( RED   );
 DigitalOut	g( GREEN );
 DigitalOut	b( BLUE  );
 
 int main( void )
 {
-	printf( "Hello, world!\r\n" );
+	cout << "Hello, world!" << endl;
 
 	while ( true )
 	{

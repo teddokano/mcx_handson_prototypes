@@ -8,6 +8,8 @@
 #include	"led/PCA9955B.h"
 #include	<math.h>
 
+using namespace	std;
+
 I2C			i2c( A4, A5 );	//	SDA, SCL
 PCA9955B	drv( i2c );
 
@@ -15,9 +17,9 @@ PCA9955B	drv( i2c );
 
 int main( void )
 {
-	printf( "***** Hello, PCA9955B! *****\r\n" );
-	printf( "pi     = %f\r\n", M_PI   );
-	printf( "PERIOD = %d\r\n", PERIOD );
+	cout << "***** Hello, PCA9955B! *****" << endl;
+	cout << "pi     = " << M_PI << endl;
+	cout << "PERIOD = " << PERIOD << endl;
 
 	drv.begin( 1.0, PCA9955B::ARDUINO_SHIELD );
 
