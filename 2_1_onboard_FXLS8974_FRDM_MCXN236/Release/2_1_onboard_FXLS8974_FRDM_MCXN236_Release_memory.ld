@@ -1,12 +1,12 @@
 /*
  * GENERATED FILE - DO NOT EDIT
  * Copyright 2008-2013 Code Red Technologies Ltd,
- * Copyright 2013-2024 NXP
+ * Copyright 2013-2025 NXP
  * SPDX-License-Identifier: BSD-3-Clause
  * Generated linker script file for MCXN236
  * Created from memory.ldt by FMCreateLinkMemory
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v24.9 [Build 25] [2024-09-26] on 2024/12/28 15:37:03
+ * MCUXpresso IDE v24.9 [Build 25] [2024-09-26] on 2025/01/01 9:44:39
  */
 
 MEMORY
