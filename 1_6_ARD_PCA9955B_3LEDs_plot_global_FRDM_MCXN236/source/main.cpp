@@ -1,7 +1,7 @@
 /*
  *  @author Tedd OKANO
  *
- *  Released under the MIT license License
+ *  Released under the MIT license
  */
 
 #include	"r01lib.h"
@@ -31,15 +31,14 @@ int main( void )
 
 	float	a, b, c, d;
 
-
 	while ( true )
 	{
 		for ( int i = 0; i < PERIOD; i++ )
 		{
 			a	= (2.0 * M_PI) * i / PERIOD;
-			b	= sin( a + (2.0 * M_PI) * (0.0 / 3.0) * PERIOD );
-			c	= sin( a + (2.0 * M_PI) * (1.0 / 3.0) * PERIOD );
-			d	= sin( a + (2.0 * M_PI) * (2.0 / 3.0) * PERIOD );
+			b	= sin( a + (2.0 * M_PI) * (0.0 / 3.0) );
+			c	= sin( a + (2.0 * M_PI) * (1.0 / 3.0) );
+			d	= sin( a + (2.0 * M_PI) * (2.0 / 3.0) );
 			x	= 0.5 + 0.5 * b;
 			y	= 0.5 + 0.5 * c;
 			z	= 0.5 + 0.5 * d;
