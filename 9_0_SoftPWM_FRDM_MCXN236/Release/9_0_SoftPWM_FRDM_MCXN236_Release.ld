@@ -6,7 +6,7 @@
  * Generated linker script file for MCXN236
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v24.12 [Build 148] [2025-01-10] on 2025/01/18 15:29:27
+ * MCUXpresso IDE v24.12 [Build 148] [2025-01-10] on 2025/01/19 12:05:00
  */
 
 INCLUDE "9_0_SoftPWM_FRDM_MCXN236_Release_library.ld"

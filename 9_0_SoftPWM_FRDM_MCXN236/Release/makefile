@@ -8,6 +8,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include source/SoftPWM/subdir.mk
 -include source/subdir.mk
 -include _r01lib_irq/subdir.mk
 ifneq ($(MAKECMDGOALS),clean)

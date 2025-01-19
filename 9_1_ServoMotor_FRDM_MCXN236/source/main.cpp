@@ -1,11 +1,11 @@
 /*
  *  @author Tedd OKANO
  *
- *  Released under the MIT license License
+ *  Released under the MIT license
  */
 
 #include	"r01lib.h"
-#include	"SoftPWM.h"
+#include	"SoftPWM/SoftPWM.h"
 
 using namespace	std;
 
