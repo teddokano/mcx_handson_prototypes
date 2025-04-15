@@ -6,7 +6,7 @@
  * Generated linker script file for MCXN236
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v24.12 [Build 148] [2025-01-10] on 2025/01/26 6:11:10
+ * MCUXpresso IDE v24.12 [Build 148] [2025-01-10] on 2025/04/15 15:52:31
  */
 
 INCLUDE "1_6_ARD_PCA9955B_3LEDs_plot_global_FRDM_MCXN236_Debug_library.ld"
