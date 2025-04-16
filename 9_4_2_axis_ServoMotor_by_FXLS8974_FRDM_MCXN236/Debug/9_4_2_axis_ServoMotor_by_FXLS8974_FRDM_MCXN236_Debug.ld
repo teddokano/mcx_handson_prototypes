@@ -6,7 +6,7 @@
  * Generated linker script file for MCXN236
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v24.12 [Build 148] [2025-01-10] on 2025/04/15 15:52:20
+ * MCUXpresso IDE v24.12 [Build 148] [2025-01-10] on 2025/04/17 5:42:20
  */
 
 INCLUDE "9_4_2_axis_ServoMotor_by_FXLS8974_FRDM_MCXN236_Debug_library.ld"
