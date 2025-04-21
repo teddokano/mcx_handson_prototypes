@@ -36,6 +36,13 @@ NXPのマイコン評価基板[FRDM-MCXN236](https://www.nxp.jp/design/design-ce
 
 このサイト([mcx_handson_prototypes](https://github.com/teddokano/mcx_handson_prototypes))からリポジトリをクローンまたはダウンロードし，MCUXpresso IDEにインポートします．  
 
+![sample_zip](images/sample_zip.png)
+![import](images/import.png)
+![zipped](images/zipped.png)
+![folder](images/folder.png)
+
+
+
 ## 中身
 ### プロジェクト
 数字から始まる名前のプロジェクト(フォルダ)は段階的にハンズオンを進めていくための，それぞれのサンプルコードを収録． 
