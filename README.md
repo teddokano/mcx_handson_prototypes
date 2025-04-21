@@ -36,10 +36,14 @@ NXPのマイコン評価基板[FRDM-MCXN236](https://www.nxp.jp/design/design-ce
 
 このサイト([mcx_handson_prototypes](https://github.com/teddokano/mcx_handson_prototypes))からリポジトリをクローンまたはダウンロードし，MCUXpresso IDEにインポートします．  
 
-![sample_zip](images/sample_zip.png)
-![import](images/import.png)
-![zipped](images/zipped.png)
-![folder](images/folder.png)
+![sample_zip](images/sample_zip.png)  
+![import](images/import.png)  
+![zipped](images/zipped.png)  
+![folder](images/folder.png)  
+
+このあと警告が出た場合は「Yes to all」や「OK」ボタンを押して先へ進みインポートを完了させます．  　　
+
+![imported](images/imported.png)  
 
 
 
