@@ -11,6 +11,30 @@ MCUXpressoとFRDM-MCXxxxxを使用したハンズオン用サンプルコード�
 ..の予定でしたが，とりあえずターミナルへの出力に`printf`ではなく`cout`を使うことにしたので，フラッシュサイズの小さいA153には入らなくなってしまいました💦  
 なので，そのままのコードで実行可能なのはN236，N947，A156です．  
 
+## これを動かすためには
+### これらのサンプルプロジェクトの動作を試してみるには，ハードウェアとソフトウェアの準備が必要です．
+#### ハードウェア
+NXPのマイコン評価基板[FRDM-MCXN236](https://www.nxp.jp/design/design-center/development-boards-and-designs/FRDM-MCXN236)を用意します．  
+基板をPCとUSBで接続します．基板には2つのUSB Type-Cコネクタがありますが，このうちJ10(MCU-Link)を使います．
+
+#### ソフトウェア
+まず，[nxp.com](http://www.nxp.com/)を開いて，MyNXPユーザアカウントを作成します．  
+![user_registration](images/user_registration.png)
+次に[MCUXpresso IDE](https://www.nxp.jp/design/design-center/software/development-software/mcuxpresso-software-and-tools-/mcuxpresso-integrated-development-environment-ide:MCUXpresso-IDE)をダウンロードし，インストールします(自身のPC環境に適したものを選んでください)．  
+
+![ide](images/ide.png)
+![ide_dl](images/ide_dl.png)
+![dl](images/dl.png)
+![agree](images/agree.png)
+![choose](images/choose.png)
+
+インストール終了後，MCUXpresso IDEを起動し，FRDM-MCXN236用のSDKをインストールします．  
+
+![sdk](images/sdk.png)
+![n236](images/n236.png)
+
+このサイト([mcx_handson_prototypes](https://github.com/teddokano/mcx_handson_prototypes))からリポジトリをクローンまたはダウンロードし，MCUXpresso IDEにインポートします．  
+
 ## 中身
 ### プロジェクト
 数字から始まる名前のプロジェクト(フォルダ)は段階的にハンズオンを進めていくための，それぞれのサンプルコードを収録． 
@@ -32,25 +56,6 @@ FRDM基板での単独実行
 - 0_6_Class
 	- C++のクラスについての説明．これまで使っているクラスとインスタンスについての理解を深める
 
-#### `1_*` サンプル・プロジェクト
-LEDドライバの評価基板：PCA9957HN-ARD基板を接続して実行
-- 1_0_ARD_PCA9957_LED_blink
-	- PCA9957HN-ARD基板を用いた基本例．24チャンネルのLEDドライバの基本的な使い方．チャンネルとPWM比の制御に言及
-- 1_1_ARD_PCA9957_LED_PWM
-	- PWMを段階的に変化をさせてLEDの輝度を制御する例
-- 1_2_ARD_PCA9957_LED_Sin
-	- 数学ライブラリを用いてのLED輝度制御
-- 1_3_ARD_PCA9957_LED_csv
-	- LED輝度データを見てみるためのCSVファイル出力を試す
-- 1_4_ARD_PCA9957_2LEDs
-	- 2個のLEDでの応用：グラデーション制御
-- 1_5_ARD_PCA9957_3LEDs
-	- 3個のLEDでの応用：グラデーション制御
-- 1_6_ARD_PCA9955B_3LEDs_plot_global
-	- 輝度設定を行う変数をグローバル変数にして，MCUXporesso IDEの変数プロット機能をデモ
-- 1_7_ARD_PCA9955B_9LEDs
-	- PCA9957HN-ARD搭載のカラーLEDすべてを点灯する例
-
 #### `2_*` サンプル・プロジェクト
 FRDM基板での単独実行．同基板搭載の加速度センサFXLS8974を使う例
 - 2_0_onboard_FXLS8974
@@ -59,13 +64,8 @@ FRDM基板での単独実行．同基板搭載の加速度センサFXLS8974を�
 	- XYZ方向の加速度の合成例
 - 2_2_onboard_FXLS8974
 	- X，Y方向への傾きを検出する例
-
-#### `3_*` サンプル・プロジェクト
-LEDドライバの評価基板：PCA9957HN-ARD基板を接続して実行．加速度センサとArduinoシールドの接続された信号線は互いに独立しているため，その間をワイヤ2本で接続しないといけない．
-- 3_0_conbination
-	- 2_2の加速度によるX，Y方向の傾きによって，LEDの色を変化させる例
-- 3_1_conbination_shock
-	- 3_0に加えて，2_1の例の合成値によって衝撃を検出する例．ポーリングで衝撃を検出しているため，柔らかいもので衝撃を加えないといけない
+- 2_3_onboard_FXLS8974
+	- X，Y方向への傾きでLEDの色を変える例
 
 #### `9_*` サンプル・プロジェクト
 - 9_0_SoftPWM
