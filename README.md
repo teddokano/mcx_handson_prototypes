@@ -32,6 +32,7 @@ NXPのマイコン評価基板[FRDM-MCXN236](https://www.nxp.jp/design/design-ce
 
 ![sdk](images/sdk.png)
 ![n236](images/n236.png)
+![instal_ok](images/instal_ok.png)
 
 このサイト([mcx_handson_prototypes](https://github.com/teddokano/mcx_handson_prototypes))からリポジトリをクローンまたはダウンロードし，MCUXpresso IDEにインポートします．  
 
