@@ -6,31 +6,29 @@
 
 #include	"r01lib.h"
 
-using namespace	std;
-
 DigitalOut	r( RED   );
 DigitalOut	g( GREEN );
 DigitalOut	b( BLUE  );
 
 int main( void )
 {
-	cout << "Hello, world!" << endl;
+	std::cout << "Hello, world!" << std::endl;
 
 	while ( true )
 	{
-		r	= 0;
-		g	= 1;
-		b	= 1;
+		r	= PIN_LED_ON;
+		g	= PIN_LED_OFF;
+		b	= PIN_LED_OFF;
 		wait( 0.5 );
 
-		r	= 1;
-		g	= 0;
-		b	= 1;
+		r	= PIN_LED_OFF;
+		g	= PIN_LED_ON;
+		b	= PIN_LED_OFF;
 		wait( 0.5 );
 
-		r	= 1;
-		g	= 1;
-		b	= 0;
+		r	= PIN_LED_OFF;
+		g	= PIN_LED_OFF;
+		b	= PIN_LED_ON;
 		wait( 0.5 );
 	}
 }

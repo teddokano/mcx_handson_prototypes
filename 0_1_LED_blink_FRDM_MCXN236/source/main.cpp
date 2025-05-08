@@ -6,20 +6,18 @@
 
 #include	"r01lib.h"
 
-using namespace	std;
-
 DigitalOut	led( BLUE );
 
 int main( void )
 {
-	cout << "Hello, world!" << endl;
+	std::cout << "Hello, world!" << std::endl;
 
 	while ( true )
 	{
-		led	= 1;
+		led	= PIN_LED_ON;
 		wait( 0.5 );
 
-		led	= 0;
+		led	= PIN_LED_OFF;
 		wait( 0.5 );
 	}
 }

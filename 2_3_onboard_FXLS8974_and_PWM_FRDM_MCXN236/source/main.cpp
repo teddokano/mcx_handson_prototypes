@@ -10,8 +10,6 @@
 #include	<math.h>
 #define		M_PI	3.1415926535897
 
-using namespace	std;
-
 I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL
 FXLS89xx	sensor( i2c );
 SoftPWM		red( RED );
@@ -20,8 +18,8 @@ SoftPWM		blue( BLUE );
 
 int main( void )
 {
-	cout << "***** Hello, FXLS89xx! *****" << endl;
-	cout << "Shows direction of tilt in color" << endl;
+	std::cout << "***** Hello, FXLS89xx! *****" << std::endl;
+	std::cout << "Shows direction of tilt in color" << std::endl;
 	i2c.scan();
 
 	sensor.init();

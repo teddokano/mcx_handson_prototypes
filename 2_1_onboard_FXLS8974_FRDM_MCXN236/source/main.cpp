@@ -8,8 +8,6 @@
 #include	"accelerometer/FXLS89xx_Arduino.h"
 #include	<math.h>
 
-using namespace	std;
-
 I2C			i2c( MB_SDA, MB_SCL );	//	SDA, SCL
 FXLS89xx	sensor( i2c );
 
@@ -17,7 +15,7 @@ float	abs_g( float *data );
 
 int main( void )
 {
-	cout << "***** Hello, FXLS89xx! *****" << endl;
+	std::cout << "***** Hello, FXLS89xx! *****" << std::endl;
 	i2c.scan();
 
 	sensor.init();
@@ -33,11 +31,11 @@ int main( void )
 	{
 		sensor.read_XYZ( sensor_data );
 
-		cout 	<< sensor_data[ 0 ] << ", " 
-				<< sensor_data[ 1 ] << ", " 
-				<< sensor_data[ 2 ] << ", "
-				<< abs_g( sensor_data )
-				<< endl;
+		std::cout 	<< sensor_data[ 0 ] << ", " 
+					<< sensor_data[ 1 ] << ", " 
+					<< sensor_data[ 2 ] << ", "
+					<< abs_g( sensor_data )
+					<< std::endl;
 		
 		wait( 0.2 );
 	}
